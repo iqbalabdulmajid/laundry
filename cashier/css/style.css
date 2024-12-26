@@ -1,0 +1,98 @@
+/* Background untuk halaman secara keseluruhan */
+body {
+    background-color: white; /* Background putih */
+    color: black; /* Teks hitam default */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.dataTables_wrapper .dataTables_length label,
+.dataTables_wrapper .dataTables_filter label,
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    color: #000000; /* Teks elemen DataTable menjadi hitam */
+}
+
+.table {
+    color: #000000; /* Teks tabel hitam */
+    width: 100%; /* Tabel full width */
+}
+
+.modal-content {
+    background-color: #f8f9fa; /* Latar belakang modal putih */
+    color: #000000; /* Teks modal hitam */
+}
+
+.btn {
+    color: white;
+}
+
+.btn-primary {
+    background-color: #7b3df3; /* Warna tombol utama */
+    border-color: #7b3df3;
+}
+
+.btn-primary:hover {
+    background-color: #5d29c7; /* Warna hover tombol utama */
+    border-color: #5d29c7;
+}
+
+.btn-warning {
+    color: #fff;
+}
+
+.table-container {
+    margin-left: -15px; /* Mengurangi margin untuk mendekatkan tabel ke sidebar */
+}
+
+thead th, tbody td {
+    white-space: nowrap; /* Menjaga konten thead dan kolom action dalam satu baris */
+}
+
+tbody td {
+    vertical-align: middle;
+}
+
+.table-actions {
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+}
+
+.modal-text {
+    color: #000000; /* Teks modal hitam */
+}
+
+.modal-content {
+    background-color: #ffffff; /* Latar belakang modal putih */
+    color: #000000; /* Teks modal hitam */
+}
+
+.modal-header {
+    border-bottom: 1px solid #dee2e6; /* Border abu-abu terang */
+}
+
+.modal-footer {
+    border-top: 1px solid #dee2e6; /* Border abu-abu terang */
+}
+
+.modal-title {
+    color: #000000; /* Judul modal hitam */
+}
+
+/* Jarak responsif untuk perangkat kecil */
+@media (max-width: 768px) {
+    .table-container {
+        margin-left: 0; /* Untuk perangkat kecil, biarkan tabel lebih rapat */
+    }
+
+    .table-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+.content{
+    color : white
+}

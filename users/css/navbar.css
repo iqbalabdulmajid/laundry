@@ -1,0 +1,170 @@
+/* Sidebar Styles */
+.sidebar {
+    background-color: #f8f9fa; /* Background sidebar putih */
+    height: 100vh;
+    padding: 20px;
+    width: 250px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 1000;
+    transition: transform 0.3s ease; /* Adjust with transform */
+    transform: translateX(-100%); /* Initially hide sidebar */
+    border-right: 1px solid #dee2e6; /* Tambahkan border kanan untuk pemisahan */
+}
+
+.sidebar.active {
+    transform: translateX(0); /* Show sidebar */
+}
+
+.sidebar-header {
+    color: #000000; /* Teks hitam */
+    font-size: 24px;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 30px;
+}
+
+.sidebar ul li {
+    margin-bottom: 15px;
+}
+
+.sidebar ul li a {
+    color: #212529; /* Teks sidebar hitam */
+    text-decoration: none;
+    font-size: 16px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e9ecef; /* Warna hover abu-abu terang */
+    color: #000000;
+}
+
+.sidebar ul li.active a {
+    background-color: #7b3df3;
+    color: #ffffff; /* Tetap putih untuk active */
+}
+
+/* Content Styles */
+.content {
+    margin-left: 250px;
+    padding: 20px;
+    background-color: white; /* Background putih untuk konten */
+    color: black; /* Teks hitam */
+    min-height: 100vh;
+    transition: margin-left 0.3s ease; /* Smooth transition */
+    width: calc(100% - 250px);
+    box-sizing: border-box;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+        width: 250px;
+    }
+
+    .sidebar.active {
+        transform: translateX(0);
+    }
+
+    .content {
+        margin-left: 0;
+        margin-right: 0;
+        width: 100%;
+        padding: 30px;
+    }
+
+    /* Toggle button for sidebar */
+    .toggle-sidebar-btn {
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1001;
+    }
+
+    /* Navbar adjustments for small screens */
+    .navbar .nav-link {
+        font-size: 14px;
+        margin-right: 5px;
+    }
+
+    .navbar .profile-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+/* Fixes for larger screens */
+@media (min-width: 769px) {
+    .sidebar {
+        transform: translateX(0); /* Always show sidebar */
+    }
+
+    .content {
+        margin-left: 205px;
+        width: calc(100% - 250px); /* Ensure full width minus sidebar */
+    }
+}
+
+/* Card Styles */
+.card {
+    background-color: rgb(39, 88, 235); /* Background putih untuk kartu */
+    color: black; /* Warna teks hitam */
+    border: 1px solid #dee2e6; /* Border abu-abu terang */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.card h5 {
+    color: #000000; /* Warna judul kartu hitam */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #ffffff; /* Navbar putih */
+    border-bottom: 1px solid #dee2e6;
+}
+
+.navbar .nav-link {
+    color: #000000; /* Teks navbar hitam */
+    font-size: 16px;
+    margin-right: 10px;
+}
+
+.navbar .badge {
+    font-size: 12px;
+    color: #ffffff;
+}
+
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+/* Fix hover effects for navbar links */
+.navbar .nav-link:hover {
+    color: #007bff; /* Biru untuk hover */
+}
+
+.dashboard-title {
+    text-align: center;
+    margin: 20px 0;
+}
